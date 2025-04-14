@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glam Match</title>
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/GalmMatch.png" alt="Glam Match Logo" class="logo-img">
+        </div>
+        <div class="topnav">
+            <nav id="navigation">
+                <a href="index.html" class="active">Get Started</a>
+                <a href="makeuplooks.html">Match My Look</a>
+                <a href="#">Contact</a>
+            </nav>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+
+
+    <main class="hero-section">
+        <div class="hero-text">
+            <h1>FIND THE PERFECT MAKEUP LOOK<br>TO MATCH YOUR OUTFIT AND VIBE</h1>
+            <h2>DISCOVER GLAM LOOKS!</h2>
+            <a href="makeuplooks.html" class="btn1">Get Started</a>
+        </div>
+        <img src="images/Lipsticks.jpeg" alt="Lipsticks" class="hero-img">
+    </main>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("navigation");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>

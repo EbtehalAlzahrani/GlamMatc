@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Match My Look - Glam Match</title>
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/GalmMatch.png" alt="Glam Match Logo" class="logo-img">
+        </div>
+        <div class="topnav">
+            <nav id="navigation">
+                <a href="index.html">Get Started</a>
+                <a href="makeuplooks.html" class="active">Match My Look</a>
+                <a href="#">Contact</a>
+            </nav>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+
+    <main class="form-page">
+        <h2>Tell us the color of your outfit<br>and your makeup vibe💄</h2>
+
+        <form id="lookForm">
+            <label for="outfitColor">Outfit Color:</label>
+            <input type="text" id="outfitColor" name="outfitColor" placeholder="ex: pink, white, black.." required>
+
+            <label for="makeupStyle">Makeup Style:</label>
+            <select id="makeupStyle" name="makeupStyle" required>
+                <option value="" disabled selected>Select your vibe</option>
+                <option value="soft">Soft</option>
+                <option value="smokey">Smokey</option>
+                <option value="glowy">Glowy</option>
+                <option value="natural">Natural</option>
+                <option value="bold">Bold</option>
+                <option value="classic">Classic</option>
+            </select>
+
+            <button type="submit" class="btn1">See Suggested Looks</button>
+            <br><br>
+            <button type="reset" class="btn2">Reset</button>
+        </form>
+
+        <div id="suggestedLooks" class="image-results"></div>
+    </main>
+
+    <script src="JavaScript/script.js"></script>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("navigation");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>

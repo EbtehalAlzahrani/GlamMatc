@@ -1,0 +1,275 @@
+/* General Reset and Layout */
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    background-color: #E3DED3;
+    color: #000;
+}
+
+.logo-img {
+    height: 28px;
+    width: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: transparent;
+}
+
+.topnav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+nav a.active {
+    color: #A00000;
+}
+
+.topnav a.icon {
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    font-size: 25px;
+    display: none;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 90px 5%;
+}
+
+.hero-text {
+    max-width: 60%;
+    font-family: "Bebas Neue", sans-serif;
+    padding: 3rem 5%;
+}
+
+.hero-text h1 {
+    font-size: 45px;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.hero-text h2 {
+    font-size: 45px;
+    font-weight: 50;
+    color: transparent;
+    -webkit-text-stroke: 1px black;
+    margin-bottom: 2rem;
+}
+
+.hero-img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Form Page */
+main.form-page {
+    text-align: center;
+    padding: 3rem;
+}
+
+main h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+form {
+    background: white;
+    padding: 2rem;
+    margin: 0 auto 2rem auto;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+form input[type="text"],
+form select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background-color: #fafafa;
+}
+
+form input[type="text"]:focus,
+form select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+form input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+.btn1 {
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    /* Make button full width */
+}
+
+.btn1:hover {
+    background-color: #A00000;
+}
+
+.btn2 {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border: 1px black solid;
+    padding: 0.8rem 1.2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.btn2:hover {
+    border: 1px #A00000 solid;
+}
+
+.image-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.image-results img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+/* images of Looks */
+.image-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.image-results img {
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-results img:hover {
+    transform: scale(1.03);
+}
+
+
+
+/* for small screens */
+@media (max-width: 700px) {
+
+    #navigation {
+        display: none;
+        flex-direction: column;
+        background-color: whitesmoke;
+        position: absolute;
+        top: 50px; /* يعتمد على ارتفاع الهيدر */
+        right: 0;
+        width: 100%;
+        padding:30PX 0;
+        text-align: center;
+        z-index: 10;
+    }
+
+    .topnav a.icon {
+        display: block;
+    }
+
+    .topnav a.icon:hover {
+        color: #A00000;
+    }
+
+    .hero-section {
+        padding: 0px 5%;
+    }
+
+    .hero-text {
+        max-width: 40%;
+        font-family: "Bebas Neue", sans-serif;
+        padding: 5rem 5%;
+    }
+
+    .hero-text h1 {
+        font-size: 35px;
+    }
+
+    .hero-text h2 {
+        font-size: 32px;
+    }
+
+    .hero-img {
+        max-width: 200px;
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+}
+
+/* for med screens */
+@media (max-width: 990px) and (min-width: 700px) {
+
+    .hero-text {
+        max-width: 50%;
+        font-family: "Bebas Neue", sans-serif;
+        padding: 3rem 5%;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .hero-text h2 {
+        font-size: 37px;
+    }
+
+    .hero-img {
+        max-width: 250px;
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+}
